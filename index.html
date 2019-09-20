@@ -3,6 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>Седона</title>
+	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 	<header class="header">
@@ -19,9 +20,9 @@
 		</nav>
 	</header>
 	<main>
-		<h1 class="hidden">Поиск отелей в Седоне</h1>
+		<h1 class="visually-hidden">Поиск отелей в Седоне</h1>
 		<section class="hero-image">
-			<h2 class="hidden">Главное изображение Седоны</h2>
+			<h2 class="visually-hidden">Главное изображение Седоны</h2>
 			<img src="img/grandcanyon.jpg" width="1200" height="509" alt="Фотография Гранд Каньона">
 			<p>Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
 			<p>Рассмотрим 5 причин, по которым седона круче, чем Гранд Каньон!</p>
@@ -81,19 +82,15 @@
 			<h2>Заинтересовались?</h2>
 			<p>Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
 			<a href="#">Поиск гостиницы в Седоне</a>
-			<form class="search-form" method="POST" action="https://echo.htmlacademy.ru">
-				<label>Дата заезда:
-					<input type="date">
-				</label>
-				<label>Дата выезда:
-					<input type="date">
-				</label>
-				<label>Взрослые:
-					<input type="number">
-				</label>
-				<label>Дети:
-					<input type="number">
-				</label>
+			<form class="search-form" method="post" action="https://echo.htmlacademy.ru">
+				<label for="field-arrival-date">Дата заезда:</label>
+				<input id="field-arrival-date" type="date" name="arrival-date">
+				<label for="field-date-of-departure">Дата выезда:</label>
+				<input id="field-date-of-departure" type="date" name="date-of-departure">
+				<label for="field-number-of-adults">Взрослые:</label>
+				<input id="field-number-of-adults" type="number" name="number-of-adults" min="0">
+				<label for="field-amount-of-children">Дети:</label>
+				<input id="field-amount-of-children" type="number" name="amount-of-children" min="0">
 				<button type="submit">Найти</button>
 			</form>
 		</section>
@@ -117,5 +114,6 @@
 			</a>
 		</div>
 	</footer>
+	<script src="js/script.js"></script>
 </body>
 </html>
