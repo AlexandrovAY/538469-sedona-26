@@ -1,3 +1,4 @@
+/* Общие стили */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -7,4 +8,382 @@
   padding: 0;
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+/* Главная страница Седоны */
+body {
+	margin: 0;
+	padding: 0;
+
+	font-family: "PT Sans", "Arial", sans-serif;
+	font-size: 14px;
+	line-height: 24px;
+	color: #000000;
+	text-transform: uppercase;
+
+	background-color: #ffffff;
+}
+
+a {
+	text-decoration: none;
+}
+
+.main-navigation ul {
+	list-style: none;
+}
+
+.site-navigation a {
+	line-height: 26px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus {
+	outline: none;
+	color: #81b3d2;
+}
+
+.site-navigation a:active {
+	color: rgba(0,0,0, 0.3);
+}
+
+.hero-image p:first-of-type {
+	font-size: 21px;
+	line-height: 26px;
+	font-weight: bold;
+	text-align: center;
+}
+
+.hero-image p:last-of-type {
+	line-height: 26px;
+	font-weight: normal;
+	text-align: center;
+}
+
+.city {
+	background-color: #81b3d2;
+	color: #ffffff;
+}
+
+.city h3 {
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+.city span,
+.city p {
+	line-height: 21px;
+}
+
+.tips-item {
+	text-align: center;
+}
+
+.tips-item:nth-of-type(1)::before {
+	display: block;
+	width: 75px;
+	height: 72px;
+	margin: 0 auto;
+	content: "";
+	background: url("../img/icon-1.svg") no-repeat;
+}
+
+.tips-item:nth-of-type(2)::before {
+	display: block;
+	width: 74px;
+	height: 70px;
+	margin: 0 auto;
+	content: "";
+	background: url("../img/icon-3.svg") no-repeat;
+}
+
+.tips-item:nth-of-type(3)::before {
+	display: block;
+	width: 64px;
+	height: 76px;
+	margin: 0 auto;
+	content: "";
+	background: url("../img/icon-2.svg") no-repeat;
+}
+
+.tips-item h3 {
+	font-size: 21px;
+	line-height: 21px;
+}
+
+.tips-item p {
+	line-height: 21px;
+	color: #333333;
+}
+
+.bridge-item {
+	background-color: #81b3d2;
+	color: white;
+}
+
+.bridge-item h3 {
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+.bridge-item span,
+.bridge-item p {
+	line-height: 21px;
+}
+
+.advantages {
+	background-color: #eeeeee;
+}
+
+.advantages-item h3 {
+	font-size: 21px;
+	line-height: 21px;	
+}
+
+.advantages-item span,
+.advantages-item p {
+	line-height: 21px;
+	color: #333333;
+}
+
+.hotel-search h2 {
+	font-size: 30px;
+	line-height: 36px;
+}
+
+.hotel-search p {
+	color: #333333;
+}
+
+.hotel-search a {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	color: #ffffff;
+	background-color: #766357;
+}
+
+.hotel-search a:hover,
+.hotel-search a:focus {
+	background-color: #604e43;
+}
+
+.hotel-search a:active {
+	background-color: #503e33;
+	color: rgba(255,255,255, 0.3);
+}
+
+.search-form label {
+	font-weight: bold;
+	line-height: 26px;
+}
+
+.search-form input {
+	font-weight: bold;
+	line-height: 26px;
+	background-color: #f2f2f2;
+	border: none;
+}
+
+.search-form input:hover {
+	background-color: #ebebeb;
+}
+
+.search-form input:focus {
+	background-color: #ffffff;
+	outline: 2px solid #eeeeee;
+}
+
+.search-form input:nth-of-type(1),
+.search-form input:nth-of-type(2) {
+	box-sizing: border-box;
+	padding-left: 12px;
+	padding-top: 14px;
+	padding-bottom: 14px;
+	width: 346px;
+	height: 38px;
+	text-transform: uppercase;
+}
+
+.search-form input:nth-of-type(3),
+.search-form input:nth-of-type(4) {
+	width: 114px;
+	height: 38px;
+	text-align: center;
+}
+
+.search-form button {
+	width: 458px;
+	height: 58px;
+	background-color: #81b3d2;
+	border: none;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	text-transform: uppercase;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+	background-color: #669ec0;
+}
+
+.search-form button:active {
+	background-color: #5496bd;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.visit-sedona a {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	color: #000000;
+	text-decoration: uppercase;
+}
+
+.social-media-sites {
+	list-style: none;
+}
+
+.social-media-sites li {
+	display: inline-block;
+	margin-right: 6px;
+}
+
+.social-media-sites a {	
+	display: inline-block;
+	width: 46px;
+	height: 48px;
+	background-color: #81b3d2;
+}
+
+.social-media-sites a:hover,
+.social-media-sites a:focus {
+	background-color: #669ec0;
+}
+
+.social-media-sites a:active {
+	background-color: #5496bd;
+}
+
+.visit-htmlacademy {
+	line-height: 26px;
+}
+
+.site-navigation-current a {
+	font-weight: bold;
+	line-height: 26px;
+	color: #766357;
+}
+
+.site-navigation-current a:hover,
+.site-navigation-current a:active {
+	color: #766357;
+}
+
+/* Страница поиска гостиницы */
+
+.product-filter {
+	background: url("../img/filter-background.jpg") no-repeat;
+}
+
+.sort-goods p {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;	
+}
+
+.sort-goods span {
+	font-size: 12px;
+	line-height: 18px;
+}
+
+.sort-goods-type,
+.sort-goods-direction {
+	list-style: none;
+}
+
+.sort-goods-type a{
+	color: rgba(0, 0, 0, 0.3);
+	border-bottom: 1px dotted #81b3d2;
+}
+
+.sort-goods-type a:hover,
+.sort-goods-type a:focus {
+	color: #81b3d2;
+}
+
+.sort-goods-type a:active {
+	color: #000000;
+}
+
+a.current-type {
+	color: #81b3d2;
+	border: none;
+}
+
+a.current-type:active {
+	color: #81b3d2;
+}
+
+.catalog-list h3 a {
+	font-weight: bold;
+	font-size: 21px;
+	line-height: 26px;
+	color: #000000;
+}
+
+.catalog-list h3 a:hover,
+.catalog-list h3 a:focus {
+	color: #81b3d2;
+}
+
+.catalog-list h3 a:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item-price span {
+	line-height: 21px;
+	color: #333333;
+}
+
+.catalog-item-details {
+	font-weight: bold;
+	line-height: 21px;
+	color: #ffffff;
+	background-color: #81b3d2;
+}
+
+.catalog-item-details:hover,
+.catalog-item-details:focus {
+	background-color: #669ec0;
+}
+
+.catalog-item-details:active {
+	background-color: #5496bd;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.catalog-item-reservation {
+	font-weight: bold;
+	line-height: 21px;
+	color: #ffffff;
+	background-color: #766357;
+}
+
+.catalog-item-reservation:hover,
+.catalog-item-reservation:focus {
+	background-color: #604e43;
+}
+
+.catalog-item-reservation:active {
+	background-color: #503e33;
+	color: rgba(0, 0, 0, 0.3);
+}
+
+.rating-points {
+	color: #666666;
+	background-color: #f2f2f2;
 }
