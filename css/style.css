@@ -328,19 +328,19 @@ a.current-type:active {
 	color: #81b3d2;
 }
 
-.catalog-list h3 a {
+.hotel-name {
 	font-weight: bold;
 	font-size: 21px;
 	line-height: 26px;
 	color: #000000;
 }
 
-.catalog-list h3 a:hover,
-.catalog-list h3 a:focus {
+.hotel-name:hover,
+.hotel-name:focus {
 	color: #81b3d2;
 }
 
-.catalog-list h3 a:active {
+.hotel-name:active {
 	color: rgba(0, 0, 0, 0.3);
 }
 
