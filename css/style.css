@@ -6,7 +6,7 @@
   margin: -1px;
   border: 0;
   padding: 0;
-  clip: rect(0 0 0 0);
+  clip: rect(0, 0, 0, 0);
   overflow: hidden;
 }
 
@@ -53,7 +53,6 @@ body>.container {
 .site-navigation {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -130,7 +129,6 @@ a {
 .city-of-sedona {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   height: 256px;
 }
 
@@ -171,7 +169,6 @@ a {
 .tips {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
 }
@@ -179,7 +176,6 @@ a {
 .tips-item {
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
 
@@ -243,7 +239,6 @@ a {
 .bridge {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
 
@@ -277,7 +272,6 @@ a {
 .advantages {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
 
@@ -313,7 +307,6 @@ a {
 
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
   justify-content: center;
   align-items: center;
 
@@ -448,7 +441,6 @@ a {
 .footer {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: space-around;
   align-items: center;
 
@@ -464,7 +456,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   color: #000000;
-  text-decoration: uppercase;
+  text-transform: uppercase;
 }
 
 .social-media-sites {
@@ -528,7 +520,6 @@ a {
 .product-filter form {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: space-between;
   align-items: center;
 
@@ -545,7 +536,6 @@ a {
 .product-filter-cost {
   display: flex;
   flex-direction: column;
-  flex-wrap: no-wrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -553,7 +543,6 @@ a {
 .sort-goods {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
   justify-content: space-around;
   align-items: center;
 
@@ -619,19 +608,19 @@ a.current-type:active {
   background-color: #fefefe;
 }
 
-.catalog-list h3 a {
+.hotel-name {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
   color: #000000;
 }
 
-.catalog-list h3 a:hover,
-.catalog-list h3 a:focus {
+.hotel-name:hover,
+.hotel-name:focus {
   color: #81b3d2;
 }
 
-.catalog-list h3 a:active {
+.hotel-name:active {
   color: rgba(0, 0, 0, 0.3);
 }
 
