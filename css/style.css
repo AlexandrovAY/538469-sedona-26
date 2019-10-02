@@ -12,6 +12,12 @@
   overflow: hidden;
 }
 
+/* Убираем "дергание" сайта у страниц со скроллом и без него */
+/* https://vaden-pro.ru/blog/css/ubrat-derganie-sayta-css */
+html {
+	overflow-y: scroll;
+}
+
 /* Главная страница Седоны */
 body {
   margin: 0;
@@ -50,7 +56,7 @@ body {
   height: 72px;
 }
 
-body > .container {
+.wrapper {
 	position: relative;
 	width: 1200px;
 	margin: 0 auto;
@@ -105,22 +111,22 @@ a {
   color: #766357;
 }
 
-.link-info {
+li:nth-of-type(1) .link-navigation {
 	text-align: left;
 	padding-left: 72px;
 }
 
-.link-photo-and-video,
-.link-state-map {
+li:nth-of-type(2) .link-navigation,
+li:nth-of-type(3) .link-navigation {
 	text-align: center;
 }
 
-.link-photo-and-video {
+li:nth-of-type(2) .link-navigation {
 	margin-right: 240px;
 	padding-left: 3px;
 }
 
-.link-hotels {
+li:nth-of-type(4) .link-navigation {
 	text-align: right;
 	padding-right: 72px;
 }
@@ -221,29 +227,29 @@ a {
 	width: 400px;
 	margin: 0;
 	padding: 0;
-  text-align: center;
+	text-align: center;
+	background-color: #ffffff;
 }
 
-.tips-item:nth-of-type(1) {
-	background: url("../img/icon-1.svg") no-repeat #ffffff;
-	background-position: 162px 60px;
+.tips-item svg {
+	margin-top: 60px;
+	margin-left: -1px;
 }
 
-.tips-item:nth-of-type(2) {
-	background: url("../img/icon-3.svg") no-repeat #ffffff;
-	background-position: 163px 61px;
-	
+.tips-item:nth-of-type(2) svg {
+	margin-top: 61px;
+	margin-left: -1px;
 }
 
-.tips-item:nth-of-type(3) {
-  background: url("../img/icon-2.svg") no-repeat #ffffff;
-	background-position: 168px 56px;
+.tips-item:nth-of-type(3) svg {
+	margin-top: 56px;
+	margin-left: -1px;
 }
 
 .tips-item h3 {
 	margin: 0;
 	padding: 0;
-	margin-top: 161px;
+	margin-top: 29px;
 	margin-bottom: 24px;
   font-size: 21px;
   line-height: 21px;
@@ -254,6 +260,7 @@ a {
 }
 
 .tips-item:nth-of-type(2) h3 {
+	margin-top: 30px;
 	margin-left: -1px;
 }
 
@@ -265,7 +272,7 @@ a {
 	margin: 0;
 	padding: 0;
 	margin-left: 48px;
-	margin-right: 50px;
+	margin-right: 49px;
 	margin-bottom: 82px;
   line-height: 21px;
   color: #333333;
@@ -625,27 +632,6 @@ a {
   background-color: #81b3d2;
 }
 
-.link-twitter::before {
-	content: "";
-	width: 17px;
-	height: 15px;
-	background: url("../img/twitter.svg") no-repeat;
-}
-
-.link-facebook::before {
-	content: "";
-	width: 12px;
-	height: 22px;
-	background: url("../img/fb-icon.svg") no-repeat;
-}
-
-.link-youtube::before {
-	content: "";
-	width: 20px;
-	height: 16px;
-	background: url("../img/youtube.svg") no-repeat;
-}
-
 .social-media-sites a:hover,
 .social-media-sites a:focus {
   background-color: #669ec0;
@@ -655,9 +641,9 @@ a {
   background-color: #5496bd;
 }
 
-.link-twitter:active::before,
-.link-facebook:active::before,
-.link-youtube:active::before {
+.link-twitter:active svg,
+.link-facebook:active svg,
+.link-youtube:active svg {
 	opacity: 0.3;
 }
 
@@ -671,6 +657,7 @@ a {
 	justify-content: space-between;
 	align-items: center;
 	width: 196px;
+	overflow: hidden;
 }
 
 .link-html-academy:hover {
@@ -1065,8 +1052,9 @@ a.current-type:active {
   background-color: #f2f2f2;
 }
 
-.footer-inner-page {
+.footer-inner-page {	
 	padding-top: 23px;
-	position: static;
+	position: absolute;
+	bottom: -121px;
   background-color: #fefefe;
 }
