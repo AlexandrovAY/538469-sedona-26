@@ -1,12 +1,15 @@
 /* Общие стили */
 .visually-hidden:not(:focus):not(:active) {
-  position: absolute;
+	position: absolute;
+	
   width: 1px;
   height: 1px;
   margin: -1px;
   border: 0;
 	padding: 0;
+
 	white-space: nowrap;
+	
 	clip-path: inset(100%);
   clip: rect(0, 0, 0, 0);
   overflow: hidden;
@@ -32,6 +35,11 @@ body {
   background-color: #f2f2f2;
 
   min-width: 1200px;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
 }
 
 .container,
@@ -61,6 +69,7 @@ body {
 	width: 1200px;
 	margin: 0 auto;
 	padding: 0;
+	box-shadow: 0 0 10px 5px #e4e3e3;
 }
 
 .container {
@@ -100,14 +109,12 @@ a {
 	padding-bottom: 16px;
 }
 
-.site-navigation-current a {
-  font-weight: bold;
-  line-height: 26px;
+.link-navigation.site-navigation-current {
   color: #766357;
 }
 
-.site-navigation-current a:hover,
-.site-navigation-current a:active {
+.link-navigation.site-navigation-current:hover,
+.link-navigation.site-navigation-current:active {
   color: #766357;
 }
 
@@ -736,8 +743,135 @@ li:nth-of-type(4) .link-navigation {
 
 .product-filter-cost {
 	margin-left: 302px;
-	width: 314px;
+	width: 319px;
 }
+
+.price-controls {
+  position: relative;
+	margin-top: 10px;
+	margin-left: 1px;
+	
+	height: 32px;
+  font-size: 0;
+
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+}
+
+.price-controls::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 2px;
+  height: 22px;
+
+  background: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+.price-controls label {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 31px;
+  vertical-align: top;
+
+  cursor: pointer;
+}
+
+.price-controls .min-price {
+  width: 90px;
+  padding-left: 65px;
+}
+
+.price-controls .max-price {
+  width: 90px;
+  padding-left: 57px;
+}
+
+.price-controls input {
+  width: 50px;
+  margin: 0;
+
+  color: inherit;
+  font: inherit;
+
+  background: none;
+  border: none;
+}
+
+.range-controls {
+  position: relative;
+
+	margin-top: 21px;
+	margin-left: 0px;
+}
+
+.range-controls .scale {
+  height: 2px;
+
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.range-controls .bar {
+  width: 80%;
+  height: 2px;
+
+  background: #ffffff;
+}
+
+.range-toggle {
+  position: absolute;
+  top: -10px;
+  
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 2px 1px 0 rgba(0, 1, 1, 0.2);
+  cursor: pointer;
+}
+
+.range-toggle:hover {
+  background: #1c4f80;
+}
+
+.range-toggle-min {
+  left: 2px;
+}
+
+.range-toggle-max {
+  left: 80%;
+}
+
+.btn-transparent {
+  display: block;
+  margin: 0 auto;
+	padding: 6px 35px;
+	margin-top: 31px;
+	margin-left: 86px;
+
+  font-size: 14px;
+  line-height: 31px;
+  color: #ffffff;
+  text-transform: uppercase;
+
+  background: transparent;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.btn-transparent:hover {
+  color: #000000;
+
+  background: #ffffff;
+}
+
 
 .product-filter-item {
 	margin: 0;
@@ -766,7 +900,7 @@ li:nth-of-type(4) .link-navigation {
 
 .product-filter-cost button {
 	align-self: center;
-	width: 133px;
+	width: 137px;
 	padding-top: 0px;
 	padding-bottom: 0px;
 	text-align: center;
@@ -831,7 +965,8 @@ li:nth-of-type(4) .link-navigation {
 }
 
 .sort-goods-type a:active {
-  color: #000000;
+	color: #000000;
+	border: none;
 }
 
 a.current-type {
@@ -866,11 +1001,17 @@ a.current-type:active {
 	fill: #231f20;
 }
 
-.current-direction,
 .sort-ascending:active,
 .sort-descending:active {
 	fill: #81b3d2;
 }
+
+.current-direction,
+.current-direction:hover,
+.current-direction:active {
+	fill: #81b3d2;
+}
+
 
 .catalog {
   display: flex;
@@ -967,20 +1108,18 @@ a.current-type:active {
 	padding-left: 16px;
 	text-align: center;
 
+  font-weight: bold;
+  line-height: 21px;
+  color: #ffffff;
+  background-color: #81b3d2;
 }
+
 .catalog-item-reservation {
 	padding-top: 3px;
 	padding-right: 17px;
 	padding-bottom: 3px;
 	padding-left: 17px;
 	text-align: center;
-}
-
-.catalog-item-details {
-  font-weight: bold;
-  line-height: 21px;
-  color: #ffffff;
-  background-color: #81b3d2;
 }
 
 .catalog-item-details:hover,
@@ -990,7 +1129,7 @@ a.current-type:active {
 
 .catalog-item-details:active {
   background-color: #5496bd;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .catalog-item-reservation {
@@ -1007,7 +1146,7 @@ a.current-type:active {
 
 .catalog-item-reservation:active {
   background-color: #503e33;
-  color: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .rating {
@@ -1070,7 +1209,7 @@ a.current-type:active {
 
 .footer-inner-page {	
 	padding-top: 23px;
-	position: absolute;
-	bottom: -121px;
-  background-color: #fefefe;
+	position: relative;
+	bottom: 0px;
+	background-color: #fefefe;
 }

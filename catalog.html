@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="utf-8">
 	<title>Гостиницы Седоны</title>
-	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&display=swap&subset=cyrillic"
-		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=latin,cyrillic" rel="stylesheet"
+		type="text/css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<div class="wrapper">
 		<header class="header">
@@ -31,39 +33,51 @@
 					<div class="product-filter-infrastructure">
 						<h3>Инфраструктура</h3>
 						<p class="product-filter-item">
-							<input type="checkbox" name="pool" id="pool-field" checked>
+							<input class="visually-hidden"  type="checkbox" name="pool" id="pool-field" checked>
 							<label for="pool-field">Бассейн</label>
 						</p>
 						<p class="product-filter-item">
-							<input type="checkbox" name="parking" id="parking-field">
+							<input class="visually-hidden" type="checkbox" name="parking" id="parking-field">
 							<label for="parking-field">Парковка</label>
 						</p>
 						<p class="product-filter-item">
-							<input type="checkbox" name="wi-fi" id="wi-fi-field">
+							<input class="visually-hidden"  type="checkbox" name="wi-fi" id="wi-fi-field">
 							<label for="wi-fi-field">Wi-Fi</label>
 						</p>
 					</div>
 					<div class="product-filter-housing">
 						<h3>Тип жилья:</h3>
 						<p class="product-filter-item">
-							<input type="checkbox" name="hotel" id="hotel-field" checked>
+							<input  class="visually-hidden"  type="checkbox" name="hotel" id="hotel-field" checked>
 							<label for="hotel-field">Гостиница</label>
 						</p>
 						<p class="product-filter-item">
-							<input type="checkbox" name="motel" id="motel-field" checked>
+							<input  class="visually-hidden"  type="checkbox" name="motel" id="motel-field" checked>
 							<label for="motel-field">Мотель</label>
 						</p>
 						<p class="product-filter-item">
-							<input type="checkbox" name="apartments" id="apartments-field" checked>
+							<input  class="visually-hidden"  type="checkbox" name="apartments" id="apartments-field" checked>
 							<label for="apartments-field">Апартаменты</label>
 						</p>
 					</div>
 					<div class="product-filter-cost">
 						<h3>Стоимость в сутки (Р):</h3>
-						<input type="number" name="min-cost" placeholder="от 0">
-						<input type="number" name="max-cost" placeholder="до 3000">
-						<input type="range" min="0" max="3000" step="100">
-						<button type="submit">Показать</button>
+						<div class="price-controls">
+							<label class="min-price">от
+								<input type="text name=" min-cost" value="0">
+							</label>
+							<label class="max-price">до
+								<input type="text name=" max-cost" value="3000">
+							</label>
+						</div>
+						<div class="range-controls">
+							<div class="scale">
+								<div class="bar"></div>
+							</div>
+							<div class="range-toggle range-toggle-min"></div>
+							<div class="range-toggle range-toggle-max"></div>
+						</div>
+						<button class="btn-transparent" type="submit">Показать</button>
 					</div>
 				</form>
 			</section>
@@ -79,7 +93,7 @@
 					</ul>
 					<ul class="sort-goods-direction">
 						<li>
-							<a class="sort-ascending" href="#" title="Сортировать по убыванию">
+							<a class="sort-ascending" href="#" title="Сортировать по возрастанию цены">
 								<svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 11 10"
 									enable-background="new 0 0 11 10" xml:space="preserve">
 									<polygon points="5.5,0 0,10 11,10 " />
@@ -87,7 +101,7 @@
 							</a>
 						</li>
 						<li>
-							<a class="sort-descending current-direction" href="#" title="Сортировать по возрастанию">
+							<a class="sort-descending current-direction" href="#" title="Сортировать по убыванию цены">
 								<svg xmlns="http://www.w3.org/2000/svg" width="11px" height="10px" viewBox="0 0 11 10"
 									enable-background="new 0 0 11 10" xml:space="preserve">
 									<polyline points="5.5,10 0,0 11,0 " />
@@ -241,4 +255,5 @@
 	</div>
 	<script src="js/script.js"></script>
 </body>
+
 </html>
