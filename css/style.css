@@ -1,5 +1,7 @@
 /* Общие стили */
-.visually-hidden:not(:focus):not(:active) {
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
 	position: absolute;
 	
   width: 1px;
@@ -70,6 +72,10 @@ img {
 	margin: 0 auto;
 	padding: 0;
 	box-shadow: 0 0 10px 5px #e4e3e3;
+}
+
+.search-form {
+	box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.2);
 }
 
 .container {
@@ -517,20 +523,42 @@ li:nth-of-type(4) .link-navigation {
 .search-form-item:nth-of-type(3) button:focus {
 	background-color: #f2f2f2;
 	stroke: #000000;
+	outline: none;
 }
 
 .search-form-item:nth-of-type(3) button:active {
 	stroke: #81b3d2;
+	outline: none;
 }
 
 .search-form-item:nth-of-type(1) input,
 .search-form-item:nth-of-type(2) input {
+	
+	position: relative;	
   box-sizing: border-box;
   padding-left: 12px;
   width: 346px;
 	height: 38px;
 	margin-left: auto;
-  text-transform: uppercase;
+	text-transform: uppercase;
+	
+}
+
+.calendar {
+	display: flex;
+}
+
+.calendar::before {
+	display: block;
+	content: "";
+	width: 21px;
+	height: 22px;
+	background: url(../img/calendar.svg);
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	z-index: 999;	
 }
 
 .search-form-item:nth-of-type(3) button,
@@ -731,6 +759,8 @@ li:nth-of-type(4) .link-navigation {
 	margin-top: 27px;	
 }
 
+
+
 .product-filter-infrastructure{
 	margin-left: 71px;
 	width: 181px;
@@ -750,7 +780,7 @@ li:nth-of-type(4) .link-navigation {
   position: relative;
 	margin-top: 10px;
 	margin-left: 1px;
-	
+	vertical-align: center;
 	height: 32px;
   font-size: 0;
 
@@ -772,13 +802,9 @@ li:nth-of-type(4) .link-navigation {
 }
 
 .price-controls label {
-  display: inline-block;
-
   font-size: 14px;
-  line-height: 31px;
+  line-height: 33px;
   vertical-align: top;
-
-  cursor: pointer;
 }
 
 .price-controls .min-price {
@@ -788,23 +814,26 @@ li:nth-of-type(4) .link-navigation {
 
 .price-controls .max-price {
   width: 90px;
-  padding-left: 57px;
+  padding-left: 75px;
 }
 
 .price-controls input {
-  width: 50px;
-  margin: 0;
-
-  color: inherit;
-  font: inherit;
-
+	display: inline-block;
+	margin-top: 7px;
+	margin-left: 5px;
+	width: 50px;
+	font-size: 14px;
+	line-height: 0px;
+	font-weight: normal;
+	color: #ffffff;
+	
   background: none;
   border: none;
 }
 
 .range-controls {
-  position: relative;
-
+	position: relative;
+	width: 100%;
 	margin-top: 21px;
 	margin-left: 0px;
 }
@@ -837,7 +866,8 @@ li:nth-of-type(4) .link-navigation {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+	background: #1c4f80;
+	border: 9px solid #ffffff;
 }
 
 .range-toggle-min {
@@ -880,18 +910,70 @@ li:nth-of-type(4) .link-navigation {
 }
 
 .product-filter-item {
+	position: relative;
 	margin-top: 25px;
-	margin-left: 23px;
+	margin-left: 39px;
 }
 
 .product-filter-housing .product-filter-item {
-	margin-left: 25px;
+	margin-top: 25px;
+	margin-left: 39px;
 }
+
 
 .product-filter-item label {
 	font-weight: normal;
 	font-size: 14px;
 	line-height: 21px;
+}
+
+.filter-item + label {
+	display: flex;
+	padding-left: 1px;
+}
+
+.housing label {
+	padding-left: 3px;
+}
+
+input[type="checkbox"]:checked + label::before {
+	position: absolute;
+	top: -1px;
+	left: -38px;
+	content: "";
+	width: 27px;
+	height: 23px;
+	background-image: url(../img/checkbox-on.svg);
+}
+
+input[type="checkbox"]:not(:checked) + label::before {
+	position: absolute;
+	top: -1px;
+	left: -38px;
+	content: "";
+	width: 23px;
+	height: 23px;
+	background-image: url(../img/checkbox-off.svg);
+}
+
+input[type="checkbox"]:checked:disabled + label::before {
+	position: absolute;
+	top: -1px;
+	left: -38px;
+	content: "";
+	width: 23px;
+	height: 23px;
+	background-image: url(../img/checkbox-on-disabled.svg);
+}
+
+input[type="checkbox"]:not(:checked):disabled + label::before {
+	position: absolute;
+	top: -1px;
+	left: -38px;
+	content: "";
+	width: 23px;
+	height: 23px;
+	background-image: url(../img/checkbox-off-disabled.svg);
 }
 
 .product-filter-cost h3 {

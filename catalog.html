@@ -33,42 +33,40 @@
 					<div class="product-filter-infrastructure">
 						<h3>Инфраструктура</h3>
 						<p class="product-filter-item">
-							<input class="visually-hidden"  type="checkbox" name="pool" id="pool-field" checked>
+							<input class="visually-hidden filter-item" type="checkbox" name="pool" id="pool-field" checked>
 							<label for="pool-field">Бассейн</label>
 						</p>
 						<p class="product-filter-item">
-							<input class="visually-hidden" type="checkbox" name="parking" id="parking-field">
+							<input class="visually-hidden filter-item" type="checkbox" name="parking" id="parking-field">
 							<label for="parking-field">Парковка</label>
 						</p>
 						<p class="product-filter-item">
-							<input class="visually-hidden"  type="checkbox" name="wi-fi" id="wi-fi-field">
+							<input class="visually-hidden filter-item"  type="checkbox" name="wi-fi" id="wi-fi-field" >
 							<label for="wi-fi-field">Wi-Fi</label>
 						</p>
 					</div>
 					<div class="product-filter-housing">
 						<h3>Тип жилья:</h3>
-						<p class="product-filter-item">
-							<input  class="visually-hidden"  type="checkbox" name="hotel" id="hotel-field" checked>
+						<p class="product-filter-item housing">
+							<input  class="visually-hidden filter-item"  type="checkbox" name="hotel" id="hotel-field" checked>
 							<label for="hotel-field">Гостиница</label>
 						</p>
-						<p class="product-filter-item">
-							<input  class="visually-hidden"  type="checkbox" name="motel" id="motel-field" checked>
+						<p class="product-filter-item housing">
+							<input  class="visually-hidden filter-item"  type="checkbox" name="motel" id="motel-field" checked>
 							<label for="motel-field">Мотель</label>
 						</p>
-						<p class="product-filter-item">
-							<input  class="visually-hidden"  type="checkbox" name="apartments" id="apartments-field" checked>
+						<p class="product-filter-item housing">
+							<input  class="visually-hidden filter-item"  type="checkbox" name="apartments" id="apartments-field" checked>
 							<label for="apartments-field">Апартаменты</label>
 						</p>
 					</div>
 					<div class="product-filter-cost">
 						<h3>Стоимость в сутки (Р):</h3>
 						<div class="price-controls">
-							<label class="min-price">от
-								<input type="text name=" min-cost" value="0">
-							</label>
-							<label class="max-price">до
-								<input type="text name=" max-cost" value="3000">
-							</label>
+							<label for="min-cost-field" class="min-price">от</label>
+							<input type="text" name="min-cost" id="min-cost-field" value="0">
+							<label for="max-cost-field" class="max-price">до</label>
+							<input type="text" name="max-cost" id="max-cost-field" value="3000">
 						</div>
 						<div class="range-controls">
 							<div class="scale">
